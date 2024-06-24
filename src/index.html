@@ -9,16 +9,39 @@
     <title>Vite Template</title>
   </head>
   <body>
-    <button id="button">shiuuu</button>
+    <button id="button">Click me</button>
+    <h1 id="title">Soy un título</h1>
+    <p id="key-info">Esperando entrada de teclado...</p>
+    <!-- <h2 id="slide-text"></h2>
+    <button id="previous-button">Previous</button>
+    <button id="next-button">Next</button> -->
+    <h2 id="slide-text"></h2>
+    <button id="previous-button" disabled>Previous</button>
+    <button id="next-button">Next</button>
 
-    <h1 id="eltitulo">Soy un título</h1>
+    <div>
+      <label id="range-label" for="range-input">0</label>
+      <input id="range-input" type="range" min="0" max="10" value="0" />
+    </div>
 
-    <p id="text">Esperando entrada de teclado</p>
-
-    <h2 id="titulo"></h2>
-    <button id="previous">Previous</button>
-  <button id="next">Next</button>
-  
+    <div>
+      <label for="input-1">Input 1</label>
+      <input type="checkbox" id="input-1" value="input 1" />
+    </div>
+    <div>
+      <label for="input-2">Input 2</label>
+      <input type="checkbox" id="input-2" value="input 2" />
+    </div>
+    <div>
+      <label for="input-3">Input 3</label>
+      <input type="checkbox" id="input-3" value="input 3" />
+    </div>
+    <div>
+      <label for="input-4">Input 4</label>
+      <input type="checkbox" id="input-4" value="input 4" />
+    </div>
+    <button id="check-button">CHECK</button>
+    <p id="checkbox-info"></p>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
