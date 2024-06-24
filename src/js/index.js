@@ -55,7 +55,30 @@ document.addEventListener('DOMContentLoaded', event => {
 });
 
 // - Crea un array con 5 palabras. Añade un h2 a tu HTML y ponle un id. Añade dos botones con el texto previus y next respectívamente. Haz que los botones cambien el texto del h2 con las palabras del array, cuando llegues a la última volverás a la primera si pulsas next y cuando estés en la primera podrás volver a la última dandole a previous.
+document.addEventListener('DOMContentLoaded', () => {
+  const words = ['Cantinflas', 'Habracadabrante', 'Dado', 'Rimbonbante', 'Exagerado'];
+  let currentIndex = 0;
 
+  const wordDisplay = document.getElementById('wordDisplay');
+  const previousButton = document.getElementById('previous');
+  const nextButton = document.getElementById('next');
+
+  const updateWordDisplay = () => {
+    wordDisplay.textContent = words[currentIndex];
+  };
+
+  previousButton.addEventListener('click', () => {
+    currentIndex = currentIndex === 0 ? words.length - 1 : currentIndex - 1;
+    updateWordDisplay();
+  });
+
+  nextButton.addEventListener('click', () => {
+    currentIndex = currentIndex === words.length - 1 ? 0 : currentIndex + 1;
+    updateWordDisplay();
+  });
+
+  updateWordDisplay();
+});
 // - Repite el mismo ejercicio pero esta vez desactiva el botón previous si estás en el primer elemento y el botón next si estás en el último
 
 // - Crea un input range con un label, al mover el input range deberá escribir en el label el valor del input range.
